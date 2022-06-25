@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'Books/Books/books_page.dart';
 import 'books_page.dart';
 
 class Books_Grade extends StatefulWidget {
@@ -16,7 +17,8 @@ class Books_GradeState extends State<Books_Grade> {
    int numb = 1;
   @override
   Widget build(BuildContext context) {
-
+    Locale myLocale = Localizations.localeOf(context);
+    String localdata=myLocale.toLanguageTag();
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -78,7 +80,7 @@ class Books_GradeState extends State<Books_Grade> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => Books_page(value:numb)));
+                          builder: (context) => Books_page(Language_Data:localdata)));
                 },
               ),
             ),

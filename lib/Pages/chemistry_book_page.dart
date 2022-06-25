@@ -1,3 +1,4 @@
+import 'package:chem/localization/localization_constants.dart';
 import 'package:flutter/material.dart';
 
 class Chemistry extends StatelessWidget {
@@ -8,7 +9,7 @@ class Chemistry extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.orange,
-        title: const Text('Chemistry Books'),
+        title:  Text(getTranslated(context,'Chemistry Books')),
       ),
     );
   }
